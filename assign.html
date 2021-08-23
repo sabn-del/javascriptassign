@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron" style="background-color: rgb(12, 122, 122); height:200px ;text-align: center;">
+        Alphabetical order<form>
+     <input type="text"  placeholder="Enter the values" id="text9">
+    <button type="button" class="btn btn-primary"  onclick="Alphabeticorder()" id= "bttn6">check</button>
+    <button type="button" class="btn btn-primary" id="">next</button>
+    <label for="" id="result3">...</label>
+    </form>
+    </div>
+    <div class="jumbotron" style="background-color: rgb(12, 122, 122); height:200px ;text-align: center;">
+        Alphabetical order<form>
+     
+    <button type="button" class="btn btn-primary"  onclick="javascrip()" id= "bttn6">check</button>
+    <button type="button" class="btn btn-primary" id="">next</button>
+    <label for="" id="result4">...</label>
+    </form>
+    </div>
+   <script>
+        function alphabeticorder(){
+            // const string= document.getElementById("text9").value;
+             var array=[];
+             array = document.getElementById("text9").value;
+            const words = array.split(' ');
+             words.sort();
+             //document.getElementById("result3").innerHtml="the sorted words are:"
+             for(  const element in words){
+                 var c = c+words[element]+' ';
+                 
+             }
+             //document.getElementById("result3").innerHTML=c;
+             alert(c);
+            }
+            function javascrip(){
+        
+        let strin=" Javascript";
+        var str=" ";
+        for(var i=0;i<=strin.length;i++){
+          for(var j=0;j<i;j++){
+              str +=  strin[j];
+          }
+          str +="\n";
+        }
+         document.getElementById("result4").innerHTML=str;
+         
+    }
+   </script>
+    
+</body>
+</html>

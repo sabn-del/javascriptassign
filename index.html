@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="jumbotron" style="background-color: aqua; height:200px ;text-align: center;">
+     prime number <form>  
+    <input type="text"  placeholder="Enter the values"name="sabna" id="text1">
+    <button type="button" class="btn btn-primary"  onclick="result()"id= "btn1">check</button>
+    <button type="button" class="btn btn-primary" id="">next</button>
+    <label for="" id="result"></label>
+</form>
+</div>
+ <div class="jumbotron" style="background-color: rgb(169, 173, 173); height:200px ;text-align: center;">
+   Frequent Item <form>
+<input type="text"  placeholder="Enter the values" id="text1">
+<button type="button" class="btn btn-primary"  onclick="frequent()"id= "btn1">check</button>
+<button type="button" class="btn btn-primary" id="">next</button>
+<label for="" id="freq"></label>
+</form>
+</div>
+<div class="jumbotron" style="background-color: rgb(206, 241, 241); height:200px ;text-align: center;">
+   Sum of the squares of the elements of an array <form>
+<input type="text"  placeholder="Enter the values" id="text3">
+<button type="button" class="btn btn-primary"  onclick="sum()"id= "btn6">check</button>
+<button type="button" class="btn btn-primary" id="">next</button>
+<label for="" id="result">...</label>
+</form>
+</div>
+<div class="jumbotron" style="background-color: rgb(86, 136, 136); height:200px ;text-align: center;">
+    oddeven<form>
+<!-- <input type="text"  placeholder="Enter the values" id="text4"> -->
+<button type="button" class="btn btn-primary"  onclick="oddeven()" id= "bttn6">check</button>
+<button type="button" class="btn btn-primary" id="">next</button>
+<label for="" id="result1">...</label>
+</form>
+</div>
+<div class="jumbotron" style="background-color: rgb(119, 214, 214); height:200px ;text-align: center;">
+    trunkate<form>
+ <input type="text"  placeholder="Enter the values" id="text5">
+ <input type="text"  placeholder="Enter the values" id="text6">
+<button type="button" class="btn btn-primary"  onclick="truncate()" id= "bttn6">check</button>
+<button type="button" class="btn btn-primary" id="">next</button>
+<label for="" id="result3">...</label>
+</form>
+</div>
+<div class="jumbotron" style="background-color: rgb(151, 180, 180); height:200px ;text-align: center;">
+    findlarge<form>
+ <input type="text"  placeholder="Enter the values" id="text7">
+ <input type="text"  placeholder="Enter the values" id="text8">
+<button type="button" class="btn btn-primary"  onclick="findLarge()" id= "bttn6">check</button>
+<button type="button" class="btn btn-primary" id="">next</button>
+<label for="" id="result2">...</label>
+</form>
+</div>
+<div class="jumbotron" style="background-color: rgb(12, 122, 122); height:200px ;text-align: center;">
+    Alphabetical order<form>
+ <input type="text"  placeholder="Enter the values" id="text9">
+<button type="button" class="btn btn-primary"  onclick="Alphabeticorder()" id= "bttn6">check</button>
+<button type="button" class="btn btn-primary" id="">next</button>
+<label for="" id="result3">...</label>
+</form>
+</div>
+<div class="jumbotron" style="background-color: rgb(12, 122, 122); height:200px ;text-align: center;">
+    javascript<form>
+ 
+<button type="button" class="btn btn-primary"  onclick="Javascrip()" id= "bttn6">check</button>
+<button type="button" class="btn btn-primary" id="">next</button>
+<label for="" id="result4">...</label>
+
+</div>
+<div class="jumbotron" style="background-color: rgb(223, 243, 243); height:200px ;text-align: center;">
+    Pyramid<form>
+ 
+<button type="button" class="btn btn-primary"  onclick="pyramid()" id= "bttn6">check</button>
+<button type="button" class="btn btn-primary" id="">next</button>
+<label for="" id="result5">...</label>
+</form>
+</div>
+
+
+
+    <script>
+        var result=function(){
+            var array=[] ;
+            var flag=0;
+            array=document.getElementById("text1").value;
+            for(var i=2;i<=array[0]/2;i++){
+             if(array[0]%i ==0){
+               document.getElementById("result").innerHTML="the number is not a prime number";
+               flag=1;
+             }
+            }
+              if(flag==0){
+                document.getElementById("result").innerHTML="the number is prime number";
+             }
+
+        }
+        function freq(){
+            var arr=[];
+            var frequent = 0;
+            var mf=1;
+            var item;
+            arr=Document.getElementById("text1").value;
+            for(var i =0;i<arr.length;i++){
+               for(var i =j;j<arr.length;j++){
+                   if(arr[i]==arr[j])
+                       frequent++;
+                   
+                   if(mf<frequent){
+                       mf=frequent;
+                       item=arr[i];
+                    
+                   }
+               }
+              
+               frequent=0;
+              
+            }
+            
+        }
+        console.log(item);
+        
+        //console.log(item+("("+mf+" times)"));
+       //document.getElementById("freq").innerHTML=(item+"(" +mf+ "times)");
+        var swap = function(letters){
+            var string ="";
+            //document.getElementById("text2").value;
+            for(var i =0;i<letters.length;i++){
+            if(letters[i]==letters[i].toLowerCase()){
+                string+= letters[i].toUpperCase();
+            }
+            else{
+                string += letters[i].toLowerCase();
+            }
+            }
+             console.log(string);
+             return string;
+        }
+        var text= 'The Quick Brown Fox';
+         // var letters=document.getElementById("text2").value
+         var swappedText = swap(text);
+        //document.getElementById("swap1").innerHTML=swap(letters);
+       
+       
+       
+        // sum of square of elements in an array
+        var array1=[];
+             var sum1 = 0;
+          function sum(){
+            
+             array1= document.getElementById("text3").value;
+            for(var i=0;i<array1.length;i++){
+             sum1= sum1+(array1[i]*array1[i]);
+              
+            }
+            //return sum1;
+            //document.getElementById("result").innerHtml=sum();
+            // console.log(sum());
+            alert(sum1);
+         }
+      //odd or even
+      function oddeven(){
+          var  result;
+          for(i=0;i<=15;i++){
+              if(i%2==0){
+                 // alert( i+"the number is even");
+                 //document.getElementById("result1").innerHtml=
+               result = i+"the number is even";
+              }
+              else{
+                //alert( i+"the number is odd");
+                //document.getElementById("reult1").innerHtml =i+" is odd";
+              result= i+"the number is odd";
+            
+            }
+            document.getElementById("result1").innerHTML= result;
+          }
+      }
+     
+ //truncate a string
+
+         function truncate(){
+             var str =[];
+              var string= document.getElementById("").value;
+             var  num= document.getElementById("").value;
+             for(var i =0;i<num;i++){
+               str = string.charAt(i);
+            }
+            document.getElementById("result3").innerHTML=str;
+            
+        }   
+
+             
+         
+      /*display larger*/
+         function findLarge(){
+             var num1= document.getElementById("text7").value;
+             var num2 = document.getElementById("text8").value;
+             
+             if(num1>num2){
+              document.getElementById("result2").innerHTML=num1+" is large";
+             }
+             else{
+                 document.getElementById("result2").innerHTML= num2+" is large";
+             }
+         }
+       /*alphabetical order*/
+        function alphabeticorder(){
+            // const string= document.getElementById("text9").value;
+             var array=[];
+             array = document.getElementById("text9").value;
+             const words = array.split(' ');
+             words.sort();
+             //document.getElementById("result3").innerHtml="the sorted words are:"
+             for(  const element in words){
+                 var c = c+words[element]+' ';
+                 
+             }
+             document.getElementById("result3").innerHTML=c;
+            
+        }
+        /*print javascript*/
+       function javascrip(){
+        
+           let strin="Javascript";
+           var str=" ";
+           for(var i=0;i<strin.length;i++){
+             for(var j=0;j<i;j++){
+                 str +=  strin[j];
+             }
+             str +="\n";
+           }
+            //document.getElementById("result4").innerHTML=str;
+            alert(str);
+       }
+       function pyramid(){
+           var str=[];
+           var num =5;
+           for(var i=0;i<num;i++){
+               for(j= 0;j<i;j++){
+                   str +="*";
+               }
+               str +="\n";
+
+           }
+           document.getElementById("").innerHTML=str;
+       }
+    
+             
+         
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
